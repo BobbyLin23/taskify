@@ -121,3 +121,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+html, body, #__nuxt {
+  @apply h-full;
+}
+
+@font-face {
+  font-family: 'HeadingFont';
+  src: url('/fonts/font.woff2') format('woff2');
+}
+
+@theme {
+  --font-text: 'Poppins', sans-serif;
+  --font-heading: 'HeadingFont', sans-serif;
+}
+
+

@@ -10,12 +10,23 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ['shadcn-nuxt'],
+  modules: ['shadcn-nuxt', '@nuxt/fonts', '@nuxt/image'],
   devServer: {
     port: 3011,
   },
   shadcn: {
     prefix: '',
-    componentDir: '~/components/ui',
+    componentDir: './components/ui',
   },
+  components: [
+    '~/components',
+    {
+      path: '~/components/ui',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/marketing',
+      pathPrefix: false,
+    },
+  ],
 })
