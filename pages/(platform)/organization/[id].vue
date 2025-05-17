@@ -9,8 +9,5 @@ const { id } = useRoute().params
 <template>
   <div>
     {{ id }}
-    <div>
-      <OrganizationSwitcher hide-personal />
-    </div>
   </div>
 </template>

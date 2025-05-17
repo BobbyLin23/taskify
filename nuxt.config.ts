@@ -10,7 +10,14 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ['shadcn-nuxt', '@nuxt/fonts', '@nuxt/image', '@clerk/nuxt'],
+  modules: [
+    'shadcn-nuxt',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@clerk/nuxt',
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+  ],
   devServer: {
     port: 3011,
   },
