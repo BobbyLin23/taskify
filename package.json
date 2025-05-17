@@ -9,7 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "@clerk/nuxt": "^1.6.5",
@@ -17,6 +20,8 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "1.10.0",
     "@pinia/nuxt": "0.11.0",
+    "@prisma/client": "6.8.2",
+    "@prisma/nuxt": "0.3.0",
     "@tailwindcss/vite": "^4.1.7",
     "@vueuse/core": "^13.2.0",
     "@vueuse/nuxt": "13.2.0",
@@ -35,6 +40,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.1",
-    "eslint": "^9.27.0"
+    "eslint": "^9.27.0",
+    "prisma": "6.8.2"
   }
 }

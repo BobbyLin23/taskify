@@ -29,7 +29,13 @@ function onExpand(id: string) {
 
 <template>
   <template v-if="isLoading">
-    <Skeleton />
+    <div class="flex items-center justify-between mb-2">
+      <Skeleton class="h-10 w-1/2" />
+      <Skeleton class="size-10" />
+    </div>
+    <div class="space-y-2">
+      <NavbarItemSkeleton v-for="i in 2" :key="i" />
+    </div>
   </template>
   <template v-else>
     <div class="font-medium text-xs flex items-center mb-1">

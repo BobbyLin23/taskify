@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@clerk/nuxt',
     '@vueuse/nuxt',
     '@pinia/nuxt',
+    '@prisma/nuxt',
   ],
   devServer: {
     port: 3011,

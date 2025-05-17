@@ -12,7 +12,9 @@ defineEmits<{
   expand: [id: string]
 }>()
 
-const { path } = useRoute()
+const route = useRoute()
+
+const path = computed(() => route.path)
 
 const routes = [
   {
