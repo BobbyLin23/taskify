@@ -4,10 +4,10 @@
 
 <template>
   <div class="h-full bg-slate-100">
-    <Navbar />
+    <MarketingNavbar />
     <main class="pt-40 pb-20 bg-slate-100">
       <slot />
     </main>
-    <Footer />
+    <MarketingFooter />
   </div>
 </template>

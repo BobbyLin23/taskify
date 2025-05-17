@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ['shadcn-nuxt', '@nuxt/fonts', '@nuxt/image'],
+  modules: ['shadcn-nuxt', '@nuxt/fonts', '@nuxt/image', '@clerk/nuxt'],
   devServer: {
     port: 3011,
   },
@@ -26,7 +26,11 @@ export default defineNuxtConfig({
     },
     {
       path: '~/components/marketing',
-      pathPrefix: false,
+      prefix: 'Marketing',
+    },
+    {
+      path: '~/components/platform',
+      prefix: 'Platform',
     },
   ],
 })
