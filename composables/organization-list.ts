@@ -9,8 +9,8 @@ export function useOrganizationList() {
   const isLoaded = useState<boolean>('isLoaded', () => false)
 
   const fetchMemberships = async () => {
-    if (isSignedIn.value && clerk.value) {
-      const memberships = await user.value?.getOrganizationMemberships()
+    if (isSignedIn.value && user.value) {
+      const memberships = await user.value.getOrganizationMemberships()
       userMemberships.value = memberships?.data || []
     }
     isLoaded.value = true
@@ -20,8 +20,10 @@ export function useOrganizationList() {
     await clerk.value?.setActive({ organization })
   }
 
-  onMounted(() => {
-    fetchMemberships()
+  watchEffect(async () => {
+    if (isSignedIn.value && user.value) {
+      await fetchMemberships()
+    }
   })
 
   return {
