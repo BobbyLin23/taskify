@@ -34,7 +34,7 @@ function onExpand(id: string) {
       <Skeleton class="size-10" />
     </div>
     <div class="space-y-2">
-      <NavbarItemSkeleton v-for="i in 2" :key="i" />
+      <PlatformNavbarItemSkeleton v-for="i in 2" :key="i" />
     </div>
   </template>
   <template v-else>

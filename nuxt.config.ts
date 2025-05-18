@@ -1,3 +1,4 @@
+import process from 'node:process'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -40,5 +41,18 @@ export default defineNuxtConfig({
       path: '~/components/platform',
       prefix: 'Platform',
     },
+    {
+      path: '~/components/form',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/organization',
+      pathPrefix: false,
+    },
   ],
+  runtimeConfig: {
+    public: {
+      unsplashAccessKey: process.env.NUXT_PUBLIC_UNSPLASH_ACCESS_KEY,
+    },
+  },
 })

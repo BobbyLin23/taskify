@@ -20,32 +20,32 @@ const routes = [
   {
     label: 'Boards',
     icon: LayoutIcon,
-    href: `/organization/${organization.id}`,
+    href: `/organization/${organization.organization.id}`,
   },
   {
     label: 'Activity',
     icon: ActivityIcon,
-    href: `/organization/${organization.id}/activity`,
+    href: `/organization/${organization.organization.id}/activity`,
   },
   {
     label: 'Settings',
     icon: SettingsIcon,
-    href: `/organization/${organization.id}/settings`,
+    href: `/organization/${organization.organization.id}/settings`,
   },
   {
     label: 'Billing',
     icon: CreditCardIcon,
-    href: `/organization/${organization.id}/billing`,
+    href: `/organization/${organization.organization.id}/billing`,
   },
 ]
 </script>
 
 <template>
-  <AccordionItem :value="organization.id" class="border-none">
+  <AccordionItem :value="organization.organization.id" class="border-none">
     <AccordionTrigger
       :class="cn('flex items-center gap-x-2 p-1.5 text-neutral-700 rounded-md hover:bg-neutral-500/10 transition text-start no-underline hover:no-underline',
                  isActive && !isExpanded && 'bg-sky-500/10 text-sky-700')"
-      @click="$emit('expand', organization.id)"
+      @click="$emit('expand', organization.organization.id)"
     >
       <div class="flex items-center gap-x-2">
         <div class="size-7 relative">
